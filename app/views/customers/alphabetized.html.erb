@@ -1,0 +1,6 @@
+<h1>Alphabetized Customers</h1>
+<div class="grid grid-cols-3 gap-4">
+<%= render partial: 'customer', collection: @customers %>
+
+<%= link_to 'View All Customers', customers_path %>
+<%= link_to 'View Missing Email', missing_email_customers_path %>

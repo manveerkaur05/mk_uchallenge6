@@ -1,0 +1,12 @@
+<!-- app/views/customers/_customer.html.erb -->
+<div class="customer-info">
+  <h2><%= customer.full_name %></h2>
+  <p><strong>Phone Number:</strong> <%= customer.phone_number %></p>
+  <p><strong>Email Address:</strong> <%= customer.email_address.presence || "N/A" %></p>
+<p><strong>Notes:</strong> <%= customer.notes %></p>
+<% if customer.profile_picture.present? && customer.profile_picture %>
+  <%= image_tag "dice/#{customer.profile_picture}", class: 'profile-picture' %>
+<% else %>
+  <p>No Image Available</p>
+<% end %>
+
